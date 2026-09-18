@@ -10,9 +10,9 @@ if [ $# -ne 3 ]; then
     exit 1
 fi
 
-WORD=$1
-FILE=$2
-NUMBER=$3
+WORD="$1"
+FILE="$2"
+NUMBER="$3"
 
 if [ ! -f "$FILE" ]; then
     echo "Error: '$FILE' does not exist."
