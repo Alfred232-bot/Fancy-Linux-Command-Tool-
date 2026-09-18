@@ -4,7 +4,8 @@
 # Combine grep and head
 # Searches for a word in a file and display the first matching lines
 
-if [ $# -ne 3 ]; them
+# Check for exact 3 argument: <word> <file> <number>
+if [ $# -ne 3 ]; then
     echo "Usage: ./fancy.sh <file> <number>" 
     exit 1
 fi
@@ -14,7 +15,7 @@ FILE=$2
 NUMBER=$3
 
 if [ ! -f "$FILE" ]; then
-    echo "Error: '$FILE' dose not exist."
+    echo "Error: '$FILE' does not exist."
     exit 1
 fi
 
